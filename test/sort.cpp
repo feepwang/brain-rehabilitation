@@ -3,6 +3,6 @@
 
 TEST(BubbleSort, BubbleSort) {
   std::vector<int> vec{3, 2, 1, 5, 4};
-  br::algorithms::BubbleSort(vec);
+  br::BubbleSort(vec);
   EXPECT_EQ(vec, std::vector<int>({1, 2, 3, 4, 5}));
 }
