@@ -11,7 +11,7 @@ inline namespace algorithms {
 
 /**
  * @brief Bubble sort
- * time complexity: O^2
+ * Computational complexity: O^2
  * @tparam T
  * @param vec
  */
