@@ -19,6 +19,10 @@ inline namespace algorithms {
  */
 template <typename T, class Comparer = std::less<T>>
 void BubbleSort(std::vector<T>& vec, Comparer functor = Comparer()) {
+  if (vec.empty()) {
+    return;
+  }
+
   for (size_t i = 0, end_index = vec.size() - 1; i <= end_index; ++i) {
     //  first loop, place the smallest element to the first
     for (size_t j = end_index; j > i; --j) {

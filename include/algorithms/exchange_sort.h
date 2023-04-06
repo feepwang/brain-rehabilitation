@@ -1,22 +1,28 @@
 #ifndef BR_EXCHANGE_SORT_H_
 #define BR_EXCHANGE_SORT_H_
 
-#include <vector>
 #include <functional>
+#include <vector>
 
 namespace br {
 inline namespace algorithms {
 
 /**
  * @brief
- * differ from bubble sort, exchange sort compare the element at start with other one to find the (smallest)
+ * differ from bubble sort, exchange sort compare the element at start with
+ * other one to find the (smallest)
  * @tparam T
  * @tparam CompareFunctor
  * @param vec
  * @param functor
  */
 template <typename T, class CompareFunctor = std::less<T>>
-void ExchangeSort(std::vector<T>& vec, CompareFunctor functor = CompareFunctor()) {
+void ExchangeSort(std::vector<T>& vec,
+                  CompareFunctor functor = CompareFunctor()) {
+  if (vec.empty()) {
+    return;
+  }
+
   for (size_t i = 0, end_index = vec.size() - 1; i < end_index; ++i) {
     //  first loop, place the smallest element to the first
     for (size_t j = i + 1; j <= end_index; ++j) {
