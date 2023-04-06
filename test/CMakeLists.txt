@@ -18,7 +18,6 @@ if (BR_ENABLE_TESTS)
         sort
         sort.cpp
     )
-    target_include_directories(sort PRIVATE GTest::gtest_main)
     target_link_libraries(
         sort
         GTest::gtest_main
