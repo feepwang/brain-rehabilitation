@@ -10,19 +10,21 @@ namespace br {
 inline namespace algorithms {
 
 /**
- * @brief Bubble sort
- * Computational complexity: O^2
+ * @brief
+ *
  * @tparam T
+ * @tparam Comparer
  * @param vec
+ * @param functor
  */
-template <typename T, class CompareFunctor = std::less<T>>
-void BubbleSort(std::vector<T>& vec) {
+template <typename T, class Comparer = std::less<T>>
+void BubbleSort(std::vector<T>& vec, Comparer functor = Comparer()) {
   for (size_t i = 0, end_index = vec.size() - 1; i <= end_index; ++i) {
     //  first loop, place the smallest element to the first
     for (size_t j = end_index; j > i; --j) {
       //  second loop, from end to start, compare and swap
       //  swap the element if functor return true
-      if (CompareFunctor()(vec[j], vec[j - 1])) {
+      if (functor(vec[j], vec[j - 1])) {
         std::swap(vec[j], vec[j - 1]);
       }
     }
