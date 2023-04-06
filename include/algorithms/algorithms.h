@@ -4,5 +4,6 @@
 
 #include "bubble_sort.h"
 #include "exchange_sort.h"
+#include "selection_sort.h"
 
 #endif
