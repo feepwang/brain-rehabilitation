@@ -9,6 +9,8 @@ inline namespace algorithms {
 
 /**
  * @brief
+ * Computational complexity: O(n^2)
+ * Stability: Yes
  * differ from bubble sort, exchange sort compare the element at start with
  * other one to find the (smallest)
  * @tparam T
@@ -17,8 +19,7 @@ inline namespace algorithms {
  * @param functor
  */
 template <typename T, class CompareFunctor = std::less<T>>
-void ExchangeSort(std::vector<T>& vec,
-                  CompareFunctor functor = CompareFunctor()) {
+void ExchangeSort(std::vector<T>& vec, const CompareFunctor& functor = CompareFunctor()) {
   if (vec.empty()) {
     return;
   }

@@ -11,6 +11,8 @@ inline namespace algorithms {
 
 /**
  * @brief
+ * Computational complexity: O(n^2)
+ * Stability: No
  * differ from exchange sort, selection sort only exchange the min value
  * @tparam T
  * @tparam Comparer
@@ -18,7 +20,7 @@ inline namespace algorithms {
  * @param functor
  */
 template <typename T, class Comparer = std::less<T>>
-void SelectionSort(std::vector<T>& vec, Comparer functor = Comparer()) {
+void SelectionSort(std::vector<T>& vec, const Comparer& functor = Comparer()) {
   if (vec.empty()) {
     return;
   }

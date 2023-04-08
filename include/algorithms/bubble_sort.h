@@ -11,14 +11,15 @@ inline namespace algorithms {
 
 /**
  * @brief
- *
+ * Computational complexity: O(n^2)
+ * Stability: Yes
  * @tparam T
  * @tparam Comparer
  * @param vec
  * @param functor
  */
 template <typename T, class Comparer = std::less<T>>
-void BubbleSort(std::vector<T>& vec, Comparer functor = Comparer()) {
+void BubbleSort(std::vector<T>& vec,const Comparer& functor = Comparer()) {
   if (vec.empty()) {
     return;
   }
