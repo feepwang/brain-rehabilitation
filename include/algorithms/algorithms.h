@@ -5,5 +5,6 @@
 #include "bubble_sort.h"
 #include "exchange_sort.h"
 #include "selection_sort.h"
+#include "insertion_sort.h"
 
 #endif
