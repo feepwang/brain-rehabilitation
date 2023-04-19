@@ -1,4 +1,7 @@
+#include <functional>
+
 #include "algorithms/algorithms.h"
+#include "algorithms/merge_sort.h"
 #include "gtest/gtest.h"
 
 using std::greater;
@@ -100,5 +103,27 @@ TEST(ShellSort, GREATER) {
 
   std::vector<int> vec2{};
   br::ShellSort(vec2, std::greater<>());
+  EXPECT_EQ(vec2, std::vector<int>());
+}
+
+TEST(MergeSort, LESS) {
+  std::vector<int> result(5);
+  std::vector<int> vec1{3, 2, 1, 5, 4};
+  br::MergeSort(vec1, 0, 5, result);
+  EXPECT_EQ(result, std::vector<int>({1, 2, 3, 4, 5}));
+
+  std::vector<int> vec2{};
+  br::MergeSort(vec2, 0, 0, result);
+  EXPECT_EQ(vec2, std::vector<int>());
+}
+
+TEST(MergeSort, GREATER) {
+  std::vector<int> result(5);
+  std::vector<int> vec1{3, 2, 1, 5, 4};
+  br::MergeSort(vec1, 0, 5, result, std::greater<>());
+  EXPECT_EQ(result, std::vector<int>({5, 4, 3, 2, 1}));
+
+  std::vector<int> vec2{};
+  br::MergeSort(vec2, 0, 0, result, std::greater<>());
   EXPECT_EQ(vec2, std::vector<int>());
 }
