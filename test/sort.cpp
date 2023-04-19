@@ -109,7 +109,7 @@ TEST(ShellSort, GREATER) {
 TEST(MergeSort, LESS) {
   std::vector<int> result(5);
   std::vector<int> vec1{3, 2, 1, 5, 4};
-  br::MergeSort(vec1, 0, 5, result);
+  br::MergeSort(vec1, 0, vec1.size(), result);
   EXPECT_EQ(result, std::vector<int>({1, 2, 3, 4, 5}));
 
   std::vector<int> vec2{};
@@ -120,7 +120,7 @@ TEST(MergeSort, LESS) {
 TEST(MergeSort, GREATER) {
   std::vector<int> result(5);
   std::vector<int> vec1{3, 2, 1, 5, 4};
-  br::MergeSort(vec1, 0, 5, result, std::greater<>());
+  br::MergeSort(vec1, 0, vec1.size(), result, std::greater<>());
   EXPECT_EQ(result, std::vector<int>({5, 4, 3, 2, 1}));
 
   std::vector<int> vec2{};
