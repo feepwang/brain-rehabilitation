@@ -1,6 +1,3 @@
-enable_testing()
-include(CTest)
-
 if (${BR_ENABLE_TESTS})
     include(FetchContent)
     FetchContent_Declare(
