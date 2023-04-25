@@ -35,7 +35,8 @@ size_t ParitionLomutoVer(std::vector<T>& vec, size_t begin, size_t end, const Co
 template <typename T, typename Comparer>
 size_t ParitionHoareVer(std::vector<T>& vec, size_t begin, size_t end, const Comparer& functor) {
   const auto pivot = vec[begin + (end - begin) / 2];
-  size_t left = begin, right = end - 1;
+  size_t left = begin;
+  size_t right = end - 1;
   while (true) {
     while (functor(vec[left], pivot)) {
       left++;

@@ -1,4 +1,4 @@
-if (${BR_ENABLE_TESTS})
+if (BR_ENABLE_TESTS)
     include(FetchContent)
     FetchContent_Declare(
     googletest
