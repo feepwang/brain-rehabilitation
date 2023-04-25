@@ -6,7 +6,7 @@
 
 namespace br {
 
-namespace algorithms {
+inline namespace algorithms {
 
 /**
  * @brief
