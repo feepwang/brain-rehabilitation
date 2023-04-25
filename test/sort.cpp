@@ -127,3 +127,23 @@ TEST(MergeSort, GREATER) {
   br::MergeSort(vec2, 0, 0, result, std::greater<>());
   EXPECT_EQ(vec2, std::vector<int>());
 }
+
+TEST(QuickSort, LESS) {
+  std::vector<int> vec1{3, 2, 1, 5, 4};
+  br::QuickSort(vec1, 0, vec1.size());
+  EXPECT_EQ(vec1, std::vector<int>({1, 2, 3, 4, 5}));
+
+  std::vector<int> vec2{};
+  br::QuickSort(vec2, 0, vec2.size());
+  EXPECT_EQ(vec2, std::vector<int>());
+}
+
+TEST(QuickSort, GREATER) {
+  std::vector<int> vec1{3, 2, 1, 5, 4};
+  br::QuickSort(vec1, 0, vec1.size(), std::greater<>());
+  EXPECT_EQ(vec1, std::vector<int>({5, 4, 3, 2, 1}));
+
+  std::vector<int> vec2{};
+  br::QuickSort(vec2, 0, vec2.size(), std::greater<>());
+  EXPECT_EQ(vec2, std::vector<int>());
+}
