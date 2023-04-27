@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.15.0)
 
+option(BR_ENABLE_TESTS "Enable tests" OFF)
+
 project("Brain ReHabilitation")
 
-option(BR_ENABLE_TESTS "Enable tests" OFF)
 include(CTest)
 enable_testing()
 
