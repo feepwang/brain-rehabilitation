@@ -30,6 +30,8 @@ class Connection {
   friend struct std::hash<Connection>;
 
  public:
+  bool operator<(const Connection& rhs) const { return socket_ < rhs.socket_; }
+
   socket_handler_t RawHandler() const noexcept { return socket_; }
 
  private:
@@ -39,15 +41,5 @@ class Connection {
 }  // namespace np
 
 }  // namespace br
-
-namespace std {
-
-template <>
-struct std::hash<br::np::Connection> {
-  size_t operator()(const br::np::Connection& conn) const noexcept {
-    return std::hash<br::np::socket_handler_t>()(conn.socket_);
-  }
-};
-}  // namespace std
 
 #endif

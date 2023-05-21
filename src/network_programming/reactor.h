@@ -9,6 +9,9 @@
 #define BR_NP_REACTOR_H_
 
 #include <memory>
+#include <set>
+
+#include "connection.h"
 
 namespace br {
 
@@ -33,6 +36,7 @@ class Reactor {
 
  private:
   std::unique_ptr<Acceptor> acceptor_;
+  std::set<std::unique_ptr<Connection>> connections_;
 };
 
 }  // namespace np
