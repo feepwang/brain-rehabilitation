@@ -32,9 +32,9 @@ void ShellSort(std::vector<T>& vec, const Comparer& functor = Comparer()) {
     return;
   }
 
-  for (size_t gap = vec.size() / 2; gap > 0; gap /= 2) {
-    for (size_t i = gap, end_index = vec.size() - 1; i <= end_index; ++i) {
-      for (size_t j = i; j >= gap; j -= gap) {
+  for (std::size_t gap = vec.size() / 2; gap > 0; gap /= 2) {
+    for (std::size_t i = gap, end_index = vec.size() - 1; i <= end_index; ++i) {
+      for (std::size_t j = i; j >= gap; j -= gap) {
         if (functor(vec[j], vec[j - gap])) {
           std::swap(vec[j], vec[j - gap]);
         } else {

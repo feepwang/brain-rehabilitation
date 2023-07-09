@@ -25,10 +25,10 @@ void SelectionSort(std::vector<T>& vec, const Comparer& functor = Comparer()) {
     return;
   }
 
-  size_t min_index{};
-  for (size_t i = 0, end_index = vec.size() - 1; i < end_index; ++i) {
+  std::size_t min_index{};
+  for (std::size_t i = 0, end_index = vec.size() - 1; i < end_index; ++i) {
     min_index = i;
-    for (size_t j = i + 1; j <= end_index; ++j) {
+    for (std::size_t j = i + 1; j <= end_index; ++j) {
       if (functor(vec[j], vec[min_index])) {
         min_index = j;
       }

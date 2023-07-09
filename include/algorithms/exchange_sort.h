@@ -24,9 +24,9 @@ void ExchangeSort(std::vector<T>& vec, const CompareFunctor& functor = CompareFu
     return;
   }
 
-  for (size_t i = 0, end_index = vec.size() - 1; i < end_index; ++i) {
+  for (std::size_t i = 0, end_index = vec.size() - 1; i < end_index; ++i) {
     //  first loop, place the smallest element to the first
-    for (size_t j = i + 1; j <= end_index; ++j) {
+    for (std::size_t j = i + 1; j <= end_index; ++j) {
       //  second loop, from end to start, compare and swap
       //  swap the element if functor return true
       if (functor(vec[j], vec[i])) {

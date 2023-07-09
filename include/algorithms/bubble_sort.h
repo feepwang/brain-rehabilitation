@@ -24,9 +24,9 @@ void BubbleSort(std::vector<T>& vec,const Comparer& functor = Comparer()) {
     return;
   }
 
-  for (size_t i = 0, end_index = vec.size() - 1; i <= end_index; ++i) {
+  for (std::size_t i = 0, end_index = vec.size() - 1; i <= end_index; ++i) {
     //  first loop, place the smallest element to the first
-    for (size_t j = end_index; j > i; --j) {
+    for (std::size_t j = end_index; j > i; --j) {
       //  second loop, from end to start, compare and swap
       //  swap the element if functor return true
       if (functor(vec[j], vec[j - 1])) {

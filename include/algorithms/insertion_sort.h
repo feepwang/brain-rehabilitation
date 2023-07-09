@@ -23,8 +23,8 @@ void InsertionSort(std::vector<T>& vec, const Comparer& functor = Comparer()) {
     return;
   }
 
-  for (size_t i = 1, end_index = vec.size() - 1; i <= end_index; ++i) {
-    for (size_t j = i; j > 0; --j) {
+  for (std::size_t i = 1, end_index = vec.size() - 1; i <= end_index; ++i) {
+    for (std::size_t j = i; j > 0; --j) {
       //  keep sub vector before i is sorted
       if (functor(vec[j], vec[j - 1])) {
         std::swap(vec[j], vec[j - 1]);
