@@ -1,0 +1,24 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+end_of_line = lf
+charset = utf-8
+
+[*.{h,c,hpp,cpp,hxx,cxx,hh,cc,ixx,cppm}]
+insert_final_newline = true
+
+[*.json]
+indent_size = 2
+
+[*.{yaml,clangd,clang-tidy,clang-format}]
+indent_size = 2
+
+[*.md]
+indent_style=tab
+
+[{Makefile,makefile,*.makefile}]
+indent_style=tab
