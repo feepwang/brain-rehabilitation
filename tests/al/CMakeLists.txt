@@ -1,0 +1,4 @@
+add_executable(fibonacci_tests fibonacci.cpp)
+target_compile_features(fibonacci_tests INTERFACE cxx_std_14)
+target_link_libraries(fibonacci_tests PRIVATE br GTest::gtest_main)
+gtest_discover_tests(fibonacci_tests)
