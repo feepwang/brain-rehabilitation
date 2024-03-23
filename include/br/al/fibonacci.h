@@ -13,7 +13,8 @@ namespace al {
 
 // pre-declaration
 template <typename Integer>
-Integer Fibonacci(Integer n);
+std::enable_if_t<std::is_integral<Integer>::value, Integer> Fibonacci(
+    Integer n);
 
 template <typename Integer>
 class FibonacciImpl {
