@@ -13,7 +13,8 @@
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_EXPORT_COMPILE_COMMANDS": true,
-        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+        "BR_ENABLE_SHARED": true
       },
       "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
     },

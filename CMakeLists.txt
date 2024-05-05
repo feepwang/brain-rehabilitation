@@ -10,8 +10,8 @@ endif()
 # fmt is much faster and more usable than iostream
 find_package(fmt CONFIG REQUIRED)
 
-include_directories("${CMAKE_SOURCE_DIR}/include")
-add_subdirectory(src)
+include_directories(br)
+add_subdirectory(br)
 
 if(BR_BUILD_TESTS)
     add_subdirectory(tests)
