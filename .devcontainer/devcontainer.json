@@ -17,14 +17,13 @@
   },
   "features": {
     "ghcr.io/devcontainers-community/features/llvm:3": {},
-    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
   "name": "br",
+  "containerEnv": {
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
+  },
   "remoteEnv": {
-    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}",
-    "http_proxy": "${localEnv:http_proxy}",
-    "https_proxy": "${localEnv:https_proxy}",
-    "no_proxy": "${localEnv:no_proxy}"
+    "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
   }
 }
